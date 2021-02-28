@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ViewImageTrailerPage extends StatefulWidget {
+class ViewImageTyrePage extends StatefulWidget {
   @override
-  _ViewImageTrailerPageState createState() => _ViewImageTrailerPageState();
+  _ViewImageTyrePageState createState() => _ViewImageTyrePageState();
 }
 
-class _ViewImageTrailerPageState extends State<ViewImageTrailerPage> {
+class _ViewImageTyrePageState extends State<ViewImageTyrePage> {
   @override
   void initState() {
     super.initState();
@@ -21,7 +21,7 @@ class _ViewImageTrailerPageState extends State<ViewImageTrailerPage> {
           width: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/truck_9.jpg"),
+              image: AssetImage("assets/images/truck_8.jpg"),
               fit: BoxFit.fitWidth,
               alignment: Alignment.center,
             ),
@@ -31,7 +31,7 @@ class _ViewImageTrailerPageState extends State<ViewImageTrailerPage> {
               Padding(
                   padding: EdgeInsets.fromLTRB(0, 3 * screenHeight / 4, 0, 0)),
               Text(
-                "Trailer Brake Lights Short to Ground",
+                "Wireless Communication with TPM ECU in front not working",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     backgroundColor: Colors.red,
@@ -39,7 +39,7 @@ class _ViewImageTrailerPageState extends State<ViewImageTrailerPage> {
                     fontSize: 20),
               ),
               Text(
-                "D1AFV - C100411",
+                "D1DIM - U114100",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     backgroundColor: Colors.red,
@@ -55,7 +55,7 @@ class _ViewImageTrailerPageState extends State<ViewImageTrailerPage> {
                     fontSize: 20),
               ),
               Text(
-                "Change the Brake Lights!!!",
+                "Replace TPM ECU Immediately!!!",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     backgroundColor: Colors.red,

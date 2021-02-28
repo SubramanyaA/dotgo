@@ -1,3 +1,6 @@
+import 'package:dotgo/TruckImageScreen/view_image_engine.dart';
+import 'package:dotgo/TruckImageScreen/view_image_trailer.dart';
+import 'package:dotgo/TruckImageScreen/view_image_tyre.dart';
 import 'package:flutter/material.dart';
 
 import 'TruckImageScreen/view_image.dart';
@@ -23,6 +26,9 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/image': (BuildContext context) => new ViewImagePage(),
         '/welcome': (BuildContext context) => new WelcomeScreen(),
+        '/engine': (BuildContext context) => new ViewImageEnginePage(),
+        '/trailer': (BuildContext context) => new ViewImageTrailerPage(),
+        '/tyre': (BuildContext context) => new ViewImageTyrePage(),
       },
     );
   }

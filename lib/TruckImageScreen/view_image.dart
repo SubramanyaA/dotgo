@@ -1,5 +1,6 @@
 import 'package:dotgo/TruckImageScreen/view_image_engine.dart';
 import 'package:dotgo/TruckImageScreen/view_image_trailer.dart';
+import 'package:dotgo/TruckImageScreen/view_image_tyre.dart';
 import 'package:flutter/material.dart';
 import 'package:path_drawing/path_drawing.dart';
 
@@ -13,6 +14,9 @@ const svgEnginePath =
 
 const svgTrailerPath =
     'M54 281L40 275L37 271L1 236V168L286 1L343 39L352 107L54 281Z';
+
+const svgTyrePath =
+    'M359 1L269 51L254 27L143 94M143 94V128L7 206L1 195V178L143 94Z';
 
 class _Clipper extends CustomClipper<Path> {
   _Clipper({this.svgPath, this.offset = Offset.zero});
@@ -73,6 +77,14 @@ class _ViewImagePageState extends State<ViewImagePage> {
                 image: 'assets/images/truck_3_copy.jpg',
                 onClick: _handleClick('Trailer'),
               ),
+              _getClippedImage(
+                clipper: _Clipper(
+                  svgPath: svgTyrePath,
+                  offset: Offset(100, 100),
+                ),
+                image: 'assets/images/truck_3_copy.jpg',
+                onClick: _handleClick('Tyre'),
+              ),
               Positioned(
                 child: MyBlinkingButton(),
                 top: 0,
@@ -92,6 +104,9 @@ class _ViewImagePageState extends State<ViewImagePage> {
         break;
       case 'Trailer':
         navigate = ViewImageTrailerPage();
+        break;
+      case 'Tyre':
+        navigate = ViewImageTyrePage();
         break;
       default:
         navigate = ViewImagePage();
@@ -133,7 +148,7 @@ class _MyBlinkingButtonState extends State<MyBlinkingButton>
       child: MaterialButton(
         onPressed: () => null,
         child: Text(
-          "There's a problem in the Engine and Trailer. \nClick on them to know more",
+          "There's a problem in the Engine, Trailer and Tyre. \nClick on them to know more",
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 20),
         ),
